@@ -1,0 +1,73 @@
+A
+function B
+
+
+
+---- bài toán -----
+
+B muốn sử dụng A: TRUE  -> lý do: A đã tồn tại  -> B hoàn toàn có thể sử dụng
+
+TH Ngược lại
+
+A muốn sử dụng B 
+
+-> lý do: A sử dụng B nhưng B lúc này chưa được có
+
+
+
+Quay trở lại function
+
+-> Nếu như trong bất kỳ trường hợp nào muốn sử dụng function -> không quan trọng function được khai báo ở đâu
+
+-> hoisting -> đưa tất cả lên trên đầu
+
+
+
+Module JS
+
+
+-> muốn sử dụng được 'ở đâu' phải xuất bản ở đấy
+-> luật sử dụng Module 
+
+-> đối với các module export, sử dụng ở module
+A -> B  
+
+Giả sử B export -> A sử dụng B, còn B thì không sử dụng A
+
+
+
+==== Mảng, Object ====
+
+Mảng: là một dữ liệu dạng danh sách, lưu trữ các dữ liệu (danh sách học sinh, dãy số ...)
+
+const arr = [1,2,3,4,5,6,7,8,9,10];
+
+-> làm việc dữ liệu với mảng -> dựa vào vị trí của phần tử
+
+- mảng luôn bắt đầu từ vị trí số 0
+
+- vị trí cuối cùng của mảng thì = số lượng phần tử - 1
+
+
+-> Cách làm việc với mảng -> dùng vòng lặp
+
+
+
+Object: bao gồm các cặp key: value
+-> làm việc với Object -> thông qua key
+const student = {
+    name: 'abc',
+    eat: ()=>{
+
+    }
+}
+-> từ key lấy ra được value
+student.name
+student['name']
+
+được gọi là đối tượng -> thuộc tính (properties), phương thức (methods)
+
+
+
+đồng ý làm ng yêu a nhé!
+!em đồng ý
