@@ -1,0 +1,75 @@
+- Kiến thức tổng quan: Array, Object
+- Các phương thức hay cách làm việc với Array hoặc Object
+
+- đã gọi là kiểu dữ liệu -> giá trị -> gán biến
+
+Array
+- Mục đích: lưu trữ danh sách dữ liệu (các phần tử trong array thì không bắt buộc phải cùng kiểu dữ liệu)
+
+const arrNumber = [1, 2, 3, 4, 5];
+
+- Để làm việc với mảng -> thông qua vị trí (index) của các phần tử (elements)
+- vị trí của mảng luôn bắt đầu từ 0, vị trí cuối cùng luôn bằng động rộng (arrNumber.length) - 1
+- dùng vòng lặp để làm việc với mảng
+
+
+Object (đối tượng) (kiểu dữ liệu object này khác với đối tượng ở trong OOP)
+- Mục đích: biểu diễn các thông tin của đối tượng, thông qua các cặp key: value (mỗi cặp này cách nhau bởi dấu phẩy)
+
+const key='address'
+const person = {
+    name: 'Khoa',
+    age: 10,
+    `${key}`:'HANOI'
+}
+
+- làm việc với object -> thông qua key
+- để sử dụng key:
+person.name -> Khoa
+
+person["name"] -> Khoa
+
+
+
+========
+Spread & Rest Operator
+
+Spread: trải phẳng tức là lấy hết giá trị ra ngoài
+- Cả 2 kỹ thuật này, đều chung 1 cú pháp là
+
+sử dụng dấu 3 chấm (...) trước dữ liệu Array hoặc Object hoặc Set
+
+nhưng kỹ thuật này sẽ luôn trả về là các giá trị bên trong của dữ liệu
+
+đối với Object -> lấy cả key và value ra ngoài
+
+
+Rest: trải ở trước tham số trong function
+-> có ý nghĩa là truyền vô hạn tham số vào function
+-> kết quả tham số đó sẽ trả về là 1 mảng các giá trị được truyền qua tham 
+
+
+
+
+5 == '5'
+Destructuring
+-> kỹ thuật phá vỡ cấu trúc
+
+
+kiểu dữ liệu
+
+Nguyên thuỷ -> khi so sánh thì sẽ so sánh về mặt giá trị (null === null -> true) 5 = 5
+Tham chiếu
+
+-> các dữ liệu này sẽ được lưu dựa trên ô nhớ
+-> so sánh về vị trí (giá trị ô nhớ | địa chỉ ô nhớ)
+-> địa chỉ ô nhớ không bao giờ trùng nhau
+
+-> object, array
+ [], {}
+
+ "[1, 2]" === "[1, 2]" ? => false
+ {} === {} ? => false  làm thế nào để so sánh tham chiếu ? mà có thể ra kết quả là true
+
+=> Cách xử lý -> sẽ cần phải đưa dữ liệu về mặt nguyên thuỷ -> so sánh từng một giá trị bên trong của array hoặc object
+=> Đưa dữ liệu về dạng string -> so sánh string JSON.stringify(person) -> đưa các dữ liệu về chung một định dạng string

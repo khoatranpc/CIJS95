@@ -73,3 +73,84 @@ const sumWD = (employees) => {
     console.log(sum);
 }
 sumWD(employees);
+// Câu 7: tìm nhân viên có mức lương cao nhất  -> tìm 1
+console.log("=====CÂU 7=====");
+// tìm giá trị lớn nhất
+const employees7 = [
+    { id: 1, name: "John", salary: 2000 },
+    { id: 2, name: "Jane", salary: 2500 },
+    { id: 3, name: "Mark", salary: 3000 },
+    { id: 4, name: "KHOA", salary: 3000 },
+];
+const findMaxSalary = (listEmployee) => {
+    // C1: sử dụng logic tìm kiếm số lớn nhất như bthg
+    // let MAX_SALARY = listEmployee[0].salary;
+    // let maxEmployeeSalary;
+    // for (let i = 1; i < listEmployee.length; i++) {
+    //     const salary = listEmployee[i].salary;
+    //     if (MAX_SALARY < salary) {
+    //         MAX_SALARY = salary;
+    //         maxEmployeeSalary = listEmployee[i];
+    //     }
+    // }
+    // console.log(maxEmployeeSalary);
+
+    // C2: dùng method find -> sẽ trả về kết quả là 1 phần tử thoả mãn điều kiện trả về
+    // C3:
+    // B1: lấy ra tất cả các mức lương -> cần phải lưu giữ được vị trí
+    // B2: tìm kiếm giá trị lớn nhất
+    // B3: tìm kiếm vị trí của giá trị đó
+    // B4: lấy tương ứng nhân viên với vị trí đó
+
+    const listSalary = listEmployee.map((item) => item.salary);
+    const MAX = Math.max(...listSalary);
+    console.log(MAX);
+    const listMax = listEmployee.filter((item) => {
+        return item.salary === MAX;
+    }); // phương thức trả về vị trí của phần tử đầu tiên thoả mãn điều kiện trả về, nếu k tìm được giá trị sẽ là -1
+    console.log(listMax);
+}
+findMaxSalary(employees7);
+
+console.log("=====CÂU 8=====");
+// tìm nhân viên chăm chỉ nhất
+// chăm chỉ nhất -> làm nhiều nhất, đi muộn ít nhất
+// để tính nhân viên chăm chỉ nhất -> tìm max (số ngày đi làm - số ngày đi muộn);
+const employees8 = [
+    { id: 1, name: "John", workingDays: 22, lateDays: 2 },
+    { id: 2, name: "Jane", workingDays: 20, lateDays: 0 },
+    { id: 3, name: "Mark", workingDays: 25, lateDays: 1 },
+];
+
+const pr8 = (listEmployee) => {
+    // tính toán công làm
+    const listWorked = listEmployee.map((item) => {
+        return item.workingDays - item.lateDays;
+    });
+    const MAX_WORKED = Math.max(...listWorked);
+    // -> filter, find
+    const employeesMaxWorked = listEmployee.find(item => (item.workingDays - item.lateDays) === MAX_WORKED);
+    console.log(employeesMaxWorked);
+}
+pr8(employees8);
+
+console.log("=====CÂU 9=====");
+const employees9 = [
+    { id: 1, name: "John", salary: 2000 },
+    { id: 2, name: "Jane", salary: 2500 },
+    { id: 3, name: "Mark", salary: 3000 },
+    { id: 4, name: "John", salary: 2200 },
+];
+
+const newObj9 = {};
+employees9.forEach((element) => {
+    // mỗi một lần duyệt -> lấy được name hiện tại
+    if (!newObj9[element.name]) {
+        newObj9[element.name] = [];
+        newObj9[element.name].push(element);
+    } else {
+        newObj9[element.name].push(element);
+    }
+});
+console.log(newObj9);
+
