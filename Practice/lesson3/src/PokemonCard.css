@@ -1,0 +1,41 @@
+.itemPokemonCard .imgPokemon {
+    background-color: #F2F2F2;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.itemPokemonCard .imgPokemon img {
+    width: 100%;
+}
+
+p.idPokemon {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+p.namePokemon {
+    margin-bottom: 5px;
+}
+
+b {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+div.info {
+    display: flex;
+    gap: 5px;
+}
+
+div.info span {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #B676C6;
+    color: white;
+    text-align: center;
+}
+
+div.info span:first-child {
+    background-color: #9BCC51;
+    color: black;
+}
