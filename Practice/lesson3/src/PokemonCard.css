@@ -30,12 +30,15 @@ div.info {
 div.info span {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #B676C6;
-    color: white;
     text-align: center;
 }
 
-div.info span:first-child {
+.Grass {
     background-color: #9BCC51;
     color: black;
+}
+
+.Fire {
+    background-color: #FE7D24;
+    color: white;
 }
