@@ -2,6 +2,7 @@
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
+    background-color: rgb(164, 164, 249);
 }
 
 .listPokemonCard .bound {
