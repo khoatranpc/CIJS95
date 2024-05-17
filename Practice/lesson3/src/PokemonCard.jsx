@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import Modal from './Modal';
 import './PokemonCard.css';
 
 /**
@@ -13,15 +15,25 @@ import './PokemonCard.css';
  */
 const PokemonCard = (props) => {
     const getLabelST = props.age < 20 ? 'Y' : 'M';
-
+    const [showModal, setShowModal] = useState(false);
+    const [tempPokemon, setTempokemon] = useState(props.pokemon);
     const handlePokemonSay = () => {
         alert(`${props.name} xin chào!`);
+    }
+    const handleChange = (e) => {
+        setTempokemon({
+            ...tempPokemon,
+            [e.target.name]: e.target.value
+        });
     }
     return (
         <div className="bound">
             <div className="itemPokemonCard">
                 <div className="imgPokemon">
-                    <img src={props.image} alt="pokemon" />
+                    <img src={props.image} alt="pokemon" onClick={() => {
+                        setShowModal(true);
+                    }}
+                    />
                 </div>
                 <p className="idPokemon">#0001</p>
                 <p className='namePokemon'>
@@ -37,6 +49,23 @@ const PokemonCard = (props) => {
                     </button>
                 </div>
             </div>
+            {showModal &&
+                <Modal
+                    handleClose={() => {
+                        setShowModal(false);
+                    }}
+                >
+                    <img src={tempPokemon.image} alt="" />
+                    <p>Tên: <input type="text" value={tempPokemon.name} onChange={handleChange} name='name' /></p>
+                    <p>Class: <input type="text" value={tempPokemon.pokemonClass} onChange={handleChange} name='pokemonClass' /></p>
+                    <button onClick={() => {
+                        props.handleChange({
+                            ...tempPokemon
+                        });
+                        setShowModal(false);
+                    }}>Lưu</button>
+                </Modal>
+            }
         </div>
     )
 }

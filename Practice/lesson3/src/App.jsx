@@ -33,31 +33,12 @@ function App() {
     age: 30
   });
 
-  const [showModal, setShowModal] = useState(false);
-
   return (
     <div className='listPokemonCard'>
-      {showModal &&
-        <Modal
-          handleClose={() => {
-            setShowModal(false);
-          }}
-        >
-          <img src={bulbasaur.image} alt="" />
-          <p>Tên: {bulbasaur.name}</p>
-          <p>Class: {bulbasaur.pokemonClass}</p>
-        </Modal>
-      }
-      {/* 
-        khi kích nút modal này, thì sẽ thay đổi showModal thành true
-      */}
-      <button onClick={() => {
-        setShowModal(true);
-      }}>Click modal</button>
-      {/* <PokemonCard name={bulbasaur.name} image={bulbasaur.image} pokemonClass={bulbasaur.pokemonClass} age={bulbasaur.age} />
-      <PokemonCard name={ivysaur.name} image={ivysaur.image} pokemonClass={ivysaur.pokemonClass} age={ivysaur.age} />
-      <PokemonCard name={venusaur.name} image={venusaur.image} pokemonClass={venusaur.pokemonClass} age={venusaur.age} />
-      <PokemonCard name={charmander.name} image={charmander.image} pokemonClass={charmander.pokemonClass} age={charmander.age} /> */}
+      <PokemonCard handleChange={setBulbasaur} pokemon={bulbasaur} name={bulbasaur.name} image={bulbasaur.image} pokemonClass={bulbasaur.pokemonClass} age={bulbasaur.age} />
+      <PokemonCard handleChange={setIvysaur} pokemon={ivysaur} name={ivysaur.name} image={ivysaur.image} pokemonClass={ivysaur.pokemonClass} age={ivysaur.age} />
+      <PokemonCard handleChange={setVenusaur} pokemon={venusaur} name={venusaur.name} image={venusaur.image} pokemonClass={venusaur.pokemonClass} age={venusaur.age} />
+      <PokemonCard handleChange={setCharmander} pokemon={charmander} name={charmander.name} image={charmander.image} pokemonClass={charmander.pokemonClass} age={charmander.age} />
     </div>
   )
 }
