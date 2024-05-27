@@ -1,0 +1,8 @@
+.containerApp {
+  padding: 15px 83px;
+  height: 100vh;
+  background-color: #192026;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}

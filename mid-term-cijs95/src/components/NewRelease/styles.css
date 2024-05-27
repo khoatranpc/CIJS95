@@ -1,0 +1,52 @@
+.newReleaseContainer h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 29px;
+}
+
+.newReleaseContainer .list {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.cardItem {
+    width: 170px;
+}
+
+.cardItem * {
+    font-size: 16px;
+    color: white;
+}
+
+.cardItem .image {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.cardItem .image .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-image: linear-gradient(#1d1d1d00, #1d1d1d);
+}
+
+.cardItem .image .epo {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.cardItem p.nameMovie {
+    margin-top: 16px;
+    font-weight: 600;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+}

@@ -1,0 +1,55 @@
+.exploreContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+
+.exploreContainer h2 {
+    font-size: 32px;
+    color: white;
+}
+
+.exploreContainer p {
+    color: #868686;
+    font-size: 22px;
+}
+
+.exploreContainer .carousel {
+    margin: auto;
+    height: 400px;
+    position: relative;
+    border-radius: 12px;
+}
+
+.exploreContainer .carousel img {
+    width: 1170px;
+    max-height: 100%;
+}
+
+/* .exploreContainer .carousel img, */
+.exploreContainer .carousel div.content {
+    position: absolute;
+    bottom: 41px;
+    left: 41px;
+    width: 50%;
+}
+
+.exploreContainer .carousel div.content p,
+.exploreContainer .carousel div.content h1 {
+    color: white;
+}
+
+.exploreContainer .carousel div.content p {
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+.bgLinear {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 12px;
+    background-image: linear-gradient(to left, #1d1d1d00, #1d1d1dd3);
+}

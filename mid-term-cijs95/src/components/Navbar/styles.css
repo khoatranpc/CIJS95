@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    gap: 141px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    font-size: 36px;
+    color: white;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #868686;
+}
+
+.navbar .searchInput {
+    padding: 8px 18px;
+    padding-right: 100px;
+    background-color: #374151;
+    border-radius: 37px;
+}
+
+.navbar .searchInput input {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+}
