@@ -1,0 +1,16 @@
+để cài đặt route với react app, cần phải làm rõ được 3 tư tưởng sau:
+
+1. React app sẽ không thể tự bản thân làm việc với browser được vì, react không làm việc trực tiếp với DOM (browser)
+Vậy, để có thể xử lý được các url (đường dẫn trên thanh của browser) thì bắt buộc phải đưa ứng dụng vào trong phạm vi của browser có thể hỗ trợ cho việc routing
+
+2. Một ứng dụng React app có thể có nhiều route (routes)
+ -> để có thể xử lý được hiện tượng điều hướng, thì cũng phải có cách gom lại vào trong một bộ quản lý nào đó, để React có thể thực hiện điều hướng
+
+3. Mỗi một route sẽ là một giao diện (thành phần của trang web) tương ứng, VD:
+    example.com/ => ComponentA
+    example.com/products => ComponentB
+    example.com/cart => ComponentC
+    example.com/about => ComponentD
+
+
+Outlet là vị trí, mà component lồng route sẽ được hiển thị

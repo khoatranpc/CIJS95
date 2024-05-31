@@ -1,5 +1,4 @@
 import React from 'react';
-import { data } from '../../store/data';
 import './styles.css';
 
 const Explore = (props) => {
